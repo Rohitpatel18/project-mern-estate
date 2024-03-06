@@ -1,4 +1,5 @@
 import  Jwt  from "jsonwebtoken";
+import { errorHandler } from "./error.js";
 
 
 export const varifyToken=(req,res,next)=>{
@@ -10,7 +11,6 @@ export const varifyToken=(req,res,next)=>{
         if(err) return next(errorHandler(403,'Forbidden'));
 
         req.user=user;
-       
         next();
     });
 
