@@ -10,6 +10,7 @@ export default function Profile() {
   const fileRef=useRef(null);
   const { currentUser,loading,error } = useSelector((state) => state.user)
   const[file, setFile]=useState(undefined);
+  // console.log(currentUser._id)
   const [filePerc,setFilePerc] =useState(0);
   const [fileUploadError,setFileUploadError] = useState
   (false);
